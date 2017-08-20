@@ -1,0 +1,26 @@
+<h2>Contact</h2>
+
+<!-- elvis operator ?. for null check -->
+
+<span>{{address?.street}}</span>
+
+<!-- template reference variable # -->
+
+<span> Contact Likes --- {{contactLikes}} </span>
+
+<p #para1 >
+
+</p>
+
+<input #name />
+
+<button (click)="para1.textContent='hello'; name.value='member'; name.focus();">
+  Set Text
+</button>
+
+<button (click)="showPara1();">
+    Show Text
+</button>
+
+<like like-title="Contact -- " [(count)]="contactLikes">
+</like>

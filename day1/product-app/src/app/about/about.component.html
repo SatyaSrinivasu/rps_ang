@@ -1,0 +1,20 @@
+<h2>About - {{startDate | date:'fullDate' | uppercase}}</h2>
+
+<span>Power Pipe - {{2 | power | power:3}}</span>
+
+<button (click)="toggle($event)"> 
+  show/hide
+</button>  
+
+<div *ngIf="show">
+  <h4>Members</h4>
+
+  <ul (mouseenter)='onEnter()'>
+     <li *ngFor="let name of members">
+       {{name | uppercase}}
+
+     </li>
+
+  </ul>
+
+</div>
